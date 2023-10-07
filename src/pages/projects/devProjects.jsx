@@ -10,7 +10,7 @@ const projects = [
     badges: ['React', 'Bootstrap', 'JavaScript', 'HTML', 'CSS'], 
     info: 'A todo app using React for client side, Bootstrap for positioning, and custom CSS styling to improve appearances', 
     liveLink: '', 
-    gitHubLink: ''
+    gitHubLink: 'https://github.com/austindahl1994/todo-app'
   },
   {
     id: 1,
@@ -19,7 +19,7 @@ const projects = [
     badges: ['React', 'Bootstrap', 'JavaScript', 'HTML', 'CSS'], 
     info: 'My portfolio made using bootstrap for the grid based rows and columns, React for the front end, along with custom CSS styling to improve visual performance.', 
     liveLink: '', 
-    gitHubLink: ''
+    gitHubLink: 'https://github.com/austindahl1994/personal-portfolio'
   },
   {
     id: 2,
