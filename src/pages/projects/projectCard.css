@@ -15,15 +15,59 @@
   transition: background-color 0.5s ease;
 }
 
-.card:hover .card-text {
+.card:hover .card-title,
+.card:hover .card-badges,
+.card:hover .card-info,
+.card:hover .btn {
   opacity: 1;
 }
 
-.card-text {
+.card-title {
   opacity: 0;
   transition: opacity 0.25s;
+  font-size: 4em;
+  font-family: Georgia;
+}
+
+.card-info {
+  opacity: 0;
+  transition: opacity 0.25s;
+  font-size: 2.5em;
+}
+
+.card-badges {
+  opacity: 0;
+  transition: opacity 0.25s;
+  font-size: 1.3em;
+}
+
+.btn, .btn:disabled {
+  opacity: 0;
+  transition: opacity 0.25s;
+  font-size: 1.5em;
 }
 
 .card-body:hover {
   background-color: rgba(255, 255, 255, 0.98);
+}
+
+@media only screen and (max-width: 768px) {
+  .card-title {
+    font-size: 1.6em;
+  }
+  
+  .card-info {
+    opacity: 0;
+    font-size: 1em;
+  }
+  
+  .card-badges {
+    opacity: 0;
+    font-size: .75em;
+  }
+  
+  .btn, .btn:disabled {
+    opacity: 0;
+    font-size: .75em;
+  }
 }

@@ -1,6 +1,7 @@
 import { Button, Col, Container, Image, Row } from 'react-bootstrap'
-import resume from '../../assets/ADResume.jpg'
+import resume from '../../assets/Resume.jpg'
 import pdf from './Resume.pdf'
+import './resume.css'
 
 const Resume = () => {
   return (
@@ -12,7 +13,7 @@ const Resume = () => {
               <a href={pdf} target='blank'>
                 <Image src={resume}/>
               </a>
-              <Button className='my-3' href={pdf} download={pdf}>
+              <Button className='my-3 dl-btn' href={pdf} download={pdf}>
                 Download
               </Button>
             </Col>
