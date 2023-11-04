@@ -9,8 +9,6 @@ import './Weather.css'
 const Weather = ({city, unit}) => {
   const [weatherData, setWeatherData] = useState('')
   const [weatherDescription, setWeatherDescription] = useState('')
-  const apiKey = import.meta.env.VITE_KEY
-  const api = 'https://api.openweathermap.org/data/2.5/weather?'
 
   useEffect(() => {
     const getData = async () => {
@@ -29,7 +27,7 @@ const Weather = ({city, unit}) => {
       getData()
     }
     
-  }, [city, unit, apiKey])
+  }, [city, unit])
 
   return (
     <>

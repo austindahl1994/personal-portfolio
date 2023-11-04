@@ -4,8 +4,8 @@ import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai'
 import './navigationbar.css'
 const Navigationbar = () => {
   const currentPath = window.location.pathname;
-  if (currentPath.includes('/live/')) {
-    return null; // Render nothing if the URL contains '/live/'
+  if (currentPath.includes('/#/weather') || currentPath.includes('/#/todo')) {
+    return null;
   }
   return (
     <>

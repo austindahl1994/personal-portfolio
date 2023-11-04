@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom"
 import { Badge, Button, Card, Col, Row } from "react-bootstrap";
 import './projectCard.css'
 
@@ -66,7 +67,8 @@ const ProjectCard = ({project}) => {
                       <Button 
                         className="hiddenbtn"
                         variant="outline-dark" 
-                        href={project.liveLink}
+                        as={Link}
+                        to={project.liveLink}
                         target="_blank">
                         Live
                       </Button>
@@ -83,7 +85,8 @@ const ProjectCard = ({project}) => {
                       <Button 
                         className="hiddenbtn"
                         variant="outline-dark" 
-                        href={project.gitHubLink}
+                        as={Link}
+                        to={project.gitHubLink}
                         target="_blank">
                         Github
                       </Button>

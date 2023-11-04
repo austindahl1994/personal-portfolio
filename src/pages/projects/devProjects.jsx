@@ -10,7 +10,7 @@ const projects = [
     image: weather, 
     badges: ['React', 'Bootstrap', 'JavaScript', 'HTML', 'CSS', 'RESTful API'], 
     info: 'A weather app using React for client side, Bootstrap for positioning, and custom CSS styling to improve appearances, with asynchronous API calls from openweathermap.org', 
-    liveLink: '/live/weather', 
+    liveLink: '/weather', 
     gitHubLink: 'https://github.com/austindahl1994/Weather-React-App'
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     image: todoApp, 
     badges: ['React', 'Bootstrap', 'JavaScript', 'HTML', 'CSS'], 
     info: 'A todo app using React for client side, Bootstrap for positioning, and custom CSS styling to improve appearances', 
-    liveLink: '/live/todo', 
+    liveLink: '/todo', 
     gitHubLink: 'https://github.com/austindahl1994/todo-app'
   },
   {
