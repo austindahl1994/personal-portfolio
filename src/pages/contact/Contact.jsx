@@ -12,19 +12,19 @@ const Contact = () => {
                   <Col>
                     <Form.Group className="mb-3" controlId="formName">
                       <Form.Label>Name: </Form.Label>
-                      <Form.Control type="text" placeholder="Your name" name="name" required/>
+                      <Form.Control type="text" placeholder="Your name" name="name" required autoComplete="name"/>
                     </Form.Group>
                   </Col>
                   <Col>
                     <Form.Group className="mb-3" controlId="formEmail">
                       <Form.Label>E-Mail: </Form.Label>
-                      <Form.Control type='email' placeholder="Your Email" name="email" required/>
+                      <Form.Control type='email' placeholder="Your Email" name="email" required autoComplete="email"/>
                     </Form.Group>
                   </Col>
                 </Row>
                 <Form.Group controlId="formMessage">
                   <Form.Label>What would you like to talk about?</Form.Label>
-                  <Form.Control as="textarea" rows={16} name="message" required/>
+                  <Form.Control as="textarea" rows={16} name="message" required />
                 </Form.Group>
                 <Button className="mt-4" variant="light" type="submit">Send Message</Button>
               </Form>
