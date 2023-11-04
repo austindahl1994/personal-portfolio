@@ -10,7 +10,7 @@ const Home = () => {
           <Col className="d-flex flex-column flex-grow-1 main-col">
             <div>
               <h5>Hi, my name is </h5>
-              <h1>Austin Dahl</h1>
+              <h1 className="fancy">Austin Dahl</h1>
             </div>
             <div className="pt-2">
               <h4 className="pb-3">A Minnesota-based Software Developer who loves to solve problems.</h4>

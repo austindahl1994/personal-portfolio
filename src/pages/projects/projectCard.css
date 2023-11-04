@@ -6,7 +6,7 @@
   transition: border 2s ease-in;
 }
 
-.card:hover {
+.project > .card:hover {
   border: none;
 }
 
@@ -22,7 +22,7 @@
   opacity: 1;
 }
 
-.card-title {
+.project > .card-title {
   opacity: 0;
   transition: opacity 0.25s;
   font-size: 4em;
@@ -41,7 +41,7 @@
   font-size: 1.3em;
 }
 
-.btn, .btn:disabled {
+.hiddenbtn, .project > .btn:disabled {
   opacity: 0;
   transition: opacity 0.25s;
   font-size: 1.5em;
@@ -66,7 +66,7 @@
     font-size: .75em;
   }
   
-  .btn, .btn:disabled {
+  .hiddenbtn .btn:disabled {
     opacity: 0;
     font-size: .75em;
   }

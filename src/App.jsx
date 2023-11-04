@@ -6,6 +6,8 @@ import About from "./pages/about/About"
 import Resume from "./pages/resume/Resume"
 import Contact from "./pages/contact/Contact"
 import Navigationbar from "./Navigationbar"
+import Weather from "./pages/projects/live/weather/WeatherWrapper"
+import Todo from "./pages/projects/live/todo/TodoWrapper"
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/projects" element={<Projects />}/>
           <Route path="/resume" element={<Resume />}/>
           <Route path="/contact" element={<Contact />}/>
+          <Route path="/live/weather" element={<Weather/>}/>
+          <Route path="/live/todo" element={<Todo />}/>
         </Routes>
       </div>
     </>

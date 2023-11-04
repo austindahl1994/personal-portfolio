@@ -1,0 +1,9 @@
+.w-card {
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 1em;
+  box-shadow: 1;
+}

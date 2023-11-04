@@ -6,11 +6,11 @@ const ProjectCard = ({project}) => {
   
   return (
     <>
-      <Col className="d-flex m-4 w-75">
+      <Col className="d-flex m-4 w-75 project">
         <Card className="card w-100" style={{backgroundImage: `url(${project.image})`}}>
           <Card.Body className="d-flex flex-column card-body overflow-auto">
-            <Row className="d-flex m-2 text-center">
-              <Card.Title className="card-title">{project.name}</Card.Title>
+            <Row className="d-flex m-2 text-center project">
+              <Card.Title className="card-title ">{project.name}</Card.Title>
             </Row>
             <Row className="d-flex m-2 text-center lh-lg">
               <Card.Text>
@@ -39,9 +39,6 @@ const ProjectCard = ({project}) => {
                       case 'Unity':
                         pillColor = 'dark'
                         break;
-                      case 'RESTful API':
-                        pillColor = 'light'
-                        break;
                       default:
                         pillColor = 'primary'
                         break;
@@ -57,15 +54,17 @@ const ProjectCard = ({project}) => {
               </Card.Text>
             </Row>
             <Row className="d-flex m-2">
-              <div className="d-flex justify-content-center gap-3 card-text" >
+              <div className="d-flex justify-content-center gap-3 card-text project" >
                   {project.liveLink === '' ? (
                     <Button 
+                      className="hiddenbtn"
                       variant="outline-dark" 
                       disabled={project.liveLink === ''}>
                         Live
                       </Button>
                     ) : (
                       <Button 
+                        className="hiddenbtn"
                         variant="outline-dark" 
                         href={project.liveLink}
                         target="_blank">
@@ -75,12 +74,14 @@ const ProjectCard = ({project}) => {
                   }
                   {project.gitHubLink === '' ? (
                     <Button 
+                      className="hiddenbtn"
                       variant="outline-dark" 
                       disabled={project.gitHubLink === ''}>
                         Github
                       </Button>
                     ) : (
                       <Button 
+                        className="hiddenbtn"
                         variant="outline-dark" 
                         href={project.gitHubLink}
                         target="_blank">

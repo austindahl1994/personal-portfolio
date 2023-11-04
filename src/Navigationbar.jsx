@@ -3,6 +3,10 @@ import { Container, Navbar, Nav} from "react-bootstrap"
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai'
 import './navigationbar.css'
 const Navigationbar = () => {
+  const currentPath = window.location.pathname;
+  if (currentPath.includes('/live/')) {
+    return null; // Render nothing if the URL contains '/live/'
+  }
   return (
     <>
       <Navbar expand="md" sticky="top" style={{backgroundColor: 'navy', color: 'white'}} data-bs-theme="dark" className="text-center">
