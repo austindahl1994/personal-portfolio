@@ -11,23 +11,12 @@ const Weather = ({city, unit}) => {
   const [weatherDescription, setWeatherDescription] = useState('')
   const apiKey = import.meta.env.VITE_KEY
   const api = 'https://api.openweathermap.org/data/2.5/weather?'
-  //https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-  //'https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png'
-
-  // useEffect(() => {
-  //   if (weatherData) {
-  //     console.log(weatherData)
-  //   }
-  // }, [weatherData])
 
   useEffect(() => {
     const getData = async () => {
-      //console.log(`getData called with city of ${city}`);
       try {
         const response = await fetch(`${api}q=${city}&appid=${apiKey}&units=${unit ? 'imperial' : 'metric'}`)
-        // console.log(`Response was ${response}`)
         const data = await response.json()
-        // console.log(`Data is ${data}`)
         setWeatherData(data)
         setWeatherDescription(data.weather[0].description)
       } catch (err) {
@@ -38,8 +27,6 @@ const Weather = ({city, unit}) => {
 
     if (city) {
       getData()
-    } else {
-      //console.log('no city')
     }
     
   }, [city, unit, apiKey])
