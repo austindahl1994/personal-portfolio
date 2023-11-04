@@ -9,6 +9,9 @@ const WeatherWrapper = () => {
 
   const submitCity = (e) => {
     e.preventDefault()
+    if (input === '') {
+      return
+    }
     setCity(input)
     setInput('')
   }

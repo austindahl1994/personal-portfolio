@@ -9,7 +9,7 @@ import './Weather.css'
 const Weather = ({city, unit}) => {
   const [weatherData, setWeatherData] = useState('')
   const [weatherDescription, setWeatherDescription] = useState('')
-  const apiKey = '1b993d67d52701cd1354136c1d630400'
+  const apiKey = import.meta.env.VITE_KEY
   const api = 'https://api.openweathermap.org/data/2.5/weather?'
   //https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
   //'https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png'
@@ -42,7 +42,7 @@ const Weather = ({city, unit}) => {
       //console.log('no city')
     }
     
-  }, [city, unit])
+  }, [city, unit, apiKey])
 
   return (
     <>
