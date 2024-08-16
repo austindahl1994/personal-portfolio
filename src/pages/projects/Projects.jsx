@@ -1,21 +1,41 @@
-import { Container, Row } from "react-bootstrap"
-import projects from "./devProjects"
-import ProjectCard from "./ProjectCard"
+import { Row, Col, Container } from "react-bootstrap";
+import projects from "./devProjects";
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
-  return (
-    <>
-        <div className="d-flex flex-grow-1 bg-light">
-          <Container className="d-flex flex-column flex-grow-1">
-            <Row className="d-flex flex-column flex-grow-1 align-content-center">
-              {projects.map((project) => (
-                <ProjectCard project={project} key={project.id}/>
-              ))}
-            </Row>
-          </Container>
-        </div>        
-    </>
-  )
-}
+  const chunkArray = (array, chunkSize) => {
+    const result = [];
+    for (let i = 0; i < array.length; i += chunkSize) {
+      result.push(array.slice(i, i + chunkSize));
+    }
+    return result;
+  };
 
-export default Projects
+  const sortedProjects = projects.sort((a, b) => b.id - a.id);
+  const projectChunks = chunkArray(sortedProjects, 4);
+
+  return (
+    <Container className="bg-light">
+      {projectChunks.map((chunk, chunkIndex) => (
+        <Row
+          key={chunkIndex}
+          className="d-flex flex-grow-1 align-content-center"
+        >
+          {chunk.map((project) => (
+            <Col
+              key={project.id}
+              xs={12}
+              sm={6}
+              lg={3}
+              className="d-flex justify-content-center my-4"
+            >
+              <ProjectCard project={project} />
+            </Col>
+          ))}
+        </Row>
+      ))}
+    </Container>
+  );
+};
+
+export default Projects;

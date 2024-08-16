@@ -1,9 +1,15 @@
 .card {
-  height: 60vh;
+  height: 40vh;
   background-size: cover;
   background-position: center center;
+  overflow-x: hidden;
+  overflow-y: hidden;
   transition: opacity 0.5s;
   transition: border 2s ease-in;
+}
+
+.card:hover {
+  overflow-y: auto;
 }
 
 .project > .card:hover {
@@ -22,29 +28,41 @@
   opacity: 1;
 }
 
+.card:hover  .btn:disabled {
+  opacity: 0.5;
+}
+
 .project > .card-title {
   opacity: 0;
   transition: opacity 0.25s;
-  font-size: 3em;
+  font-size: 1.5em;
   font-family: Georgia;
 }
 
 .card-info {
   opacity: 0;
   transition: opacity 0.25s;
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .card-badges {
   opacity: 0;
   transition: opacity 0.25s;
-  font-size: 1.3em;
+  font-size: .75em;
 }
 
 .hiddenbtn, .project > .btn:disabled {
   opacity: 0;
   transition: opacity 0.25s;
-  font-size: 1.5em;
+  font-size: 1em;
+}
+
+.scroll-hide {
+  overflow-y: hidden;
+}
+
+.scroll-hide:hover {
+  overflow-y: auto;
 }
 
 .card-body:hover {

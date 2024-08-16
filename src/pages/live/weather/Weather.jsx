@@ -9,6 +9,7 @@ import './Weather.css'
 const Weather = ({city, unit}) => {
   const [weatherData, setWeatherData] = useState('')
   const [weatherDescription, setWeatherDescription] = useState('')
+  const api = 'https://api.openweathermap.org/data/2.5/weather?'
 
   useEffect(() => {
     const getData = async () => {
