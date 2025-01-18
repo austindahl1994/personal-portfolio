@@ -1,6 +1,6 @@
 import { DiJavascript, DiCss3, DiHtml5, 
     DiUnitySmall, DiReact, DiNodejsSmall, DiBootstrap, 
-    DiGit, DiPython, DiMysql } from 'react-icons/Di'
+    DiGit, DiPython, DiMysql } from 'react-icons/di'
 
 
 const cardIconsOne = [

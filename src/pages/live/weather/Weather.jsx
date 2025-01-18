@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Card, Col, Container, Row } from "react-bootstrap"
-import { FaWind, FaTemperatureHigh } from 'react-icons/Fa'
-import { FaTemperatureArrowUp, FaTemperatureArrowDown } from 'react-icons/Fa6'
+import { FaWind, FaTemperatureHigh } from 'react-icons/fa'
+import { FaTemperatureArrowUp, FaTemperatureArrowDown } from 'react-icons/fa6'
 import { RiWaterPercentFill } from 'react-icons/ri'
 import './Weather.css'
 
