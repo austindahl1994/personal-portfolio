@@ -1,6 +1,6 @@
 import portfolio from "../../assets/portfolioImage.jpg";
 import lifeSupport from "../../assets/LifeSupport.jpg";
-import todoApp from "../../assets/todoApp.jpg";
+import todoApp from "../../assets/TodoApp.jpg";
 import weather from "../../assets/weather.jpg";
 import resilience from "../../assets/resilience.jpg";
 import carnival from "../../assets/CarnivalShootout.jpg"
