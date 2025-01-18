@@ -9,7 +9,7 @@ const ProjectCard = ({ project }) => {
       <Card
         className="card w-100"
         style={{
-          backgroundImage: `url(${project.image})`,
+          backgroundImage: `url(${project.image})` || ``,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -85,10 +85,10 @@ const ProjectCard = ({ project }) => {
                   to={project.liveLink}
                   target="_blank"
                 >
-                  Live
+                  {project.id === 8 ? "Git Front" : "Live"}
                 </Button>
               )}
-              {project.hasDescription === false ? (
+              {/* {project.hasDescription === false ? (
                 <Button className="hiddenbtn" variant="outline-dark" disabled>
                   About
                 </Button>
@@ -102,7 +102,7 @@ const ProjectCard = ({ project }) => {
                 >
                   About
                 </Button>
-              )}
+              )} */}
               {project.gitHubLink === "" ? (
                 <Button
                   className="hiddenbtn"
@@ -119,7 +119,7 @@ const ProjectCard = ({ project }) => {
                   to={project.gitHubLink}
                   target="_blank"
                 >
-                  Github
+                  {project.id === 8 ? "Git Back" : "Github"}
                 </Button>
               )}
             </div>

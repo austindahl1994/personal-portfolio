@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/home/Home";
 import Projects from "./pages/projects/Projects.jsx";
 import About from "./pages/about/About";
-import Resume from "./pages/resume/Resume";
 import Contact from "./pages/contact/Contact";
 import Navigationbar from "./Navigationbar";
 import Weather from "./pages/live/weather/WeatherWrapper";
@@ -18,7 +17,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/weather" element={<Weather />} />
           <Route path="/todo" element={<Todo />} />
